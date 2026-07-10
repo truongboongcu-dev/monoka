@@ -1,0 +1,502 @@
+.wrap-cart{
+	display: flex;
+	align-items: flex-start;
+}
+.product-info-cart{
+	width: 60%;
+	padding: 0px 40px 0px 0px;
+	border-right: 1px solid #ccc;
+	height: stretch;
+}
+.cart-collaterals{
+	width: 40%;
+	padding: 0px 0px 0px 40px;
+}
+.product-remove{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.woocommerce-cart-form__contents{
+	width: 100%;
+}
+.product-name{
+
+}
+
+.product-remove img{
+	width: 50px;
+	height: auto;
+}
+tbody{
+	display: contents;
+	align-items: center;
+}
+.product-name-cart .variation{
+	display: flex;
+	margin-block-start: 2px;
+	margin-block-end: 0px;
+}
+.product-name-cart .variation p{
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	color: #be2a32;
+}
+
+.product-name-cart .variation dd{
+	margin-inline-start: 4px;
+	margin-inline-end: 20px;
+}
+thead th{
+	text-align: justify;
+}
+.remove{
+	line-height: 8px;
+	border: 1px solid;
+	padding: 6px 6px 6px 6px;
+	border-radius: 50%;
+	color: #ccc;
+}
+.remove:hover{
+	color: red;
+}
+/* --- Khung Layout Chính (2 Cột) --- */
+.wrap-cart {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.product-info-cart {
+    width: 65%;
+}
+
+.cart-collaterals {
+    width: 35%;
+    position: sticky;
+    top: 20px;
+}
+
+/* --- Khôi phục cấu trúc bảng chuẩn (SỬA LỖI ĐƠ NÚT) --- */
+table.shop_table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* KHÔNG dùng display: contents cho tbody để tránh lỗi JS */
+table.shop_table tbody {
+    display: table-row-group !important; 
+}
+
+table.shop_table tr {
+    display: table-row !important;
+}
+
+table.shop_table th, 
+table.shop_table td {
+    padding: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+table.shop_table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* --- Thiết kế ô sản phẩm --- */
+.product-remove-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Nút xóa sản phẩm (X) */
+.remove {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.remove:hover {
+    color: #fff !important;
+    background-color: #be2a32;
+    border-color: #be2a32;
+}
+
+/* Ảnh sản phẩm trong bảng */
+table.shop_table td img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+/* Tên sản phẩm & Biến thể */
+.product-name a {
+    color: #3992e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+.product-name a:hover {
+    text-decoration: underline;
+}
+
+.product-name .variation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+.product-name .variation dt {
+    color: #666;
+}
+.product-name .variation dd {
+    margin: 0;
+    color: #be2a32;
+    font-weight: 600;
+}
+
+/* --- Giá & Tạm tính --- */
+.product-price, .product-subtotal {
+    min-width: 100px;
+    font-weight: 600;
+}
+.product-subtotal {
+    color: #be2a32;
+}
+
+/* --- Ô Số Lượng Đẹp Hơn --- */
+ .qty {
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hiệu ứng khi click vào ô */
+ .qty:focus {
+    border-color: #be2a32;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(190, 42, 50, 0.1);
+}
+
+/* Loại bỏ mũi tên tăng giảm mặc định trên Chrome/Safari/Edge (nếu muốn nhìn gọn gàng hơn) */
+.cart_item .qty::-webkit-outer-spin-button,
+.cart_item .qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- Hàng chức năng (Mã giảm giá & Cập nhật) --- */
+td.actions {
+    padding: 16px !important;
+    background: #fafafa;
+}
+
+/* Bọc khu vực coupon để không bị tràn */
+.actions .coupon {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.actions .coupon input[type="text"] {
+    width: 160px;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Các nút bấm hệ thống */
+button.button, input.button {
+    height: 38px;
+    padding: 0 16px;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Nút áp dụng mã */
+button[name="apply_coupon"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+button[name="apply_coupon"]:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nút Cập nhật giỏ hàng */
+button[name="update_cart"] {
+    float: right;
+    background-color: #fff;
+    color: #be2a32;
+    border: 1px solid #be2a32;
+    	margin: 20px 0px;
+}
+button[name="update_cart"]:hover {
+    background-color: #be2a32;
+    color: #fff;
+}
+
+/* --- Khối Tổng cộng giỏ hàng --- */
+.cart_totals {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.cart_totals h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart_totals table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cart_totals table td, 
+.cart_totals table th {
+    padding: 10px 0 !important;
+    background: none !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.cart_totals .order-total td span {
+    color: #be2a32;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Nút Tiến hành thanh toán */
+a.button.checkout-button {
+    display: block;
+    text-align: center;
+    background-color: #be2a32;
+    color: #fff !important;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+a.button.checkout-button:hover {
+    background-color: #a32027;
+}
+
+.wc-backward {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+.wc-backward:hover {
+    color: #be2a32;
+}
+
+/* --- Responsive (Mobile dưới 768px) --- */
+@media (max-width: 768px) {
+    .wrap-cart {
+        flex-direction: column;
+    }
+    .product-info-cart, .cart-collaterals {
+        width: 100%;
+    }
+    button[name="update_cart"] {
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .actions .coupon {
+        width: 100%;
+        flex-direction: column;
+    }
+    .actions .coupon input[type="text"] {
+        width: 100%;
+    }
+    button[name="apply_coupon"] {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   CSS TỐI ƯU RIÊNG CHO KHU VỰC COUPON (MÃ GIẢM GIÁ) & CẬP NHẬT GIỎ HÀNG
+   ========================================================================== */
+
+/* 1. Đảm bảo khôi phục hoàn toàn cấu trúc Table gốc của WooCommerce */
+table.shop_table tbody {
+    display: table-row-group !important;
+}
+table.shop_table tr {
+    display: table-row !important;
+}
+table.shop_table td.actions {
+    display: table-cell !important;
+    padding: 20px !important;
+    background-color: #fdfdfd;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* 2. Cấu trúc flex cho hàng Actions chứa cả Coupon và nút Update */
+table.shop_table td.actions .actions-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Trường hợp WooCommerce không tự bọc thẻ div bên ngoài, ép flex trực tiếp */
+td.actions {
+    text-align: right;
+}
+
+/* 3. Thiết kế khung nhập Mã Giảm Giá (Coupon) */
+.actions .coupon {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    float: left; /* Đẩy sang bên trái bảng */
+}
+
+/* Ô nhập text */
+.actions .coupon input[type="text"] {
+    width: 180px !important;
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    background-color: #fff !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+    outline: none !important;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.actions .coupon input[type="text"]:focus {
+    border-color: #be2a32 !important; /* Đổi màu viền khi click vào */
+    box-shadow: 0 0 0 3px rgba(190, 42, 50, 0.15) !important;
+}
+
+/* Nút "Áp dụng" */
+button[name="apply_coupon"] {
+    height: 40px !important;
+    padding: 0 18px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #495057 !important;
+    background-color: #fff !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+button[name="apply_coupon"]:hover {
+    background-color: #f1f3f5 !important;
+    color: #212529 !important;
+    border-color: #adb5bd !important;
+}
+
+/* 4. Thiết kế nút "Cập nhật giỏ hàng" */
+button[name="update_cart"] {
+    height: 40px !important;
+    padding: 0 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #be2a32 !important;
+    background-color: #fff !important;
+    border: 1px solid #be2a32 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    float: right; /* Đẩy sang bên phải bảng */
+    transition: all 0.2s ease !important;
+}
+
+button[name="update_cart"]:hover {
+    color: #fff !important;
+    background-color: #be2a32 !important;
+    box-shadow: 0 4px 12px rgba(190, 42, 50, 0.2) !important;
+}
+
+/* Vô hiệu hóa style khi nút bị mờ (chưa có gì thay đổi số lượng) */
+button[name="update_cart"]:disabled,
+button[name="update_cart"][disabled] {
+    color: #999 !important;
+    border-color: #ddd !important;
+    background-color: #fafafa !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+/* 5. Giao diện Responsive trên Mobile (Dưới 768px) */
+@media (max-width: 768px) {
+    .actions .coupon {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        float: none !important;
+        gap: 10px !important;
+    }
+    
+    .actions .coupon input[type="text"],
+    button[name="apply_coupon"],
+    button[name="update_cart"] {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    button[name="update_cart"] {
+        float: none !important;
+        margin-top: 12px !important;
+    }
+}
+
+#coupon_code{
+	padding: 11px;
+	margin: 20px 0px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+
+}

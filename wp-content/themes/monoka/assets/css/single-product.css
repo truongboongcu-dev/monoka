@@ -1,0 +1,230 @@
+/* ==========================================================================
+   1. LAYOUT & BREADCRUMB CƠ BẢN
+   ========================================================================== */
+.breadcrumb-list { margin: 20px 0px; font-size: 14px; color: #666; }
+.breadcrumb-item:not(:last-child)::after { content: "/"; margin: 0 8px; color: #ccc; }
+.product-main-content { display: flex; gap: 30px; }
+.product-img { width: 60%; }
+.product-info { width: 40%; }
+.product-img-slider { height: fit-content; max-height: max-content; }
+
+h1 { margin-block-start: 0px; margin-block-end: 0px; font-size: 20px; font-weight: 500; }
+.product-main-content .price { text-align: justify; }
+.product-main-content ins { font-size: 20px; }
+
+/* ==========================================================================
+   2. GALLERY & SLIDER (SLICK SLIDER)
+   ========================================================================== */
+.product-gallery-container { display: flex; gap: 15px; }
+.vertical-nav { width: 100px; }
+.thumb-item { padding: 5px 0; outline: none; }
+.thumb-inner { border: 1px solid #eee; transition: 0.3s; cursor: pointer; }
+.slick-current .thumb-inner { border-color: #f5222d; }
+.thumb-inner img { width: 100%; display: block; aspect-ratio: 1/1; object-fit: cover; }
+
+.main-for { flex: 1; overflow: hidden; background: #fdfdfd; }
+.main-img-item { cursor: zoom-in; }
+.main-img-item img { width: 100%; display: block; }
+
+/* Điều hướng Slider */
+.slick-prev:before, .slick-next:before { color: #000; }
+.vertical-nav .slick-prev { top: 8px; left: 50%; transform: translateX(-50%) rotate(90deg); z-index: 1; }
+.vertical-nav .slick-next { bottom: 8px; top: auto; left: 50%; transform: translateX(-50%) rotate(90deg); }
+
+/* Fancybox */
+.fancybox__container { --fancybox-bg: rgba(20, 20, 20, 0.95); }
+.fancybox__thumbs .fancybox__thumb { border-radius: 2px; }
+
+/* ==========================================================================
+   3. FLASH DEAL & COUNTDOWN
+   ========================================================================== */
+.flash-deal-banner {
+    width: 100%;
+    height: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+.countdown-wrapper { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.countdown-title { color: #ffffff; font-size: 13px; font-weight: bold; letter-spacing: 0.5px; font-family: sans-serif; }
+.countdown-timer { display: flex; gap: 12px; }
+.timer-box {
+    background-color: #2c3a47;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 2px;
+    border-radius: 4px;
+    min-width: 24px;
+    text-align: center;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace; 
+}
+/* .timer-box:first-child { display: none; } */
+
+/* ==========================================================================
+   4. BIẾN THỂ SẢN PHẨM (WOOCOMMERCE & SWATCHES)
+   ========================================================================== */
+/* Ẩn mặc định WooCommerce */
+.variations select#pa_mau,
+.variations .label { display: none !important; }
+
+/* Custom Swatches (Màu sắc/Hình ảnh) */
+.custom-swatches-wrapper { display: flex; align-items: flex-start; margin: 20px 0; margin-bottom: 20px; }
+.custom-swatches-wrapper .swatch-label { margin-right: 10px; color: #333; padding-top: 8px; }
+.custom-swatches-wrapper .swatch-options { display: flex; flex-wrap: wrap; gap: 10px; flex: 1; }
+.custom-swatches-wrapper .swatch-item { display: flex; align-items: center; border: 1px solid #e2e2e2; padding: 6px 12px; border-radius: 2px; cursor: pointer; background: #fff; transition: all 0.15s ease; }
+.custom-swatches-wrapper .swatch-item img { width: 25px; height: 25px; object-fit: cover; margin-right: 8px; border-radius: 2px; }
+.custom-swatches-wrapper .swatch-item span { font-size: 14px; color: #333; }
+
+/* Trạng thái Swatch Hover / Active */
+.custom-swatches-wrapper .swatch-item:hover,
+.custom-swatches-wrapper .swatch-item.active { border-color: #bd0000; position: relative; }
+.custom-swatches-wrapper .swatch-item.active span { color: #bd0000; font-weight: bold; }
+
+/* Dropdown biến thể khác (Đèn Led...) */
+.variations_form .variations { width: 100%; border-collapse: collapse; }
+.variations_form .variations tr { display: flex; align-items: center; margin-bottom: 15px; }
+.variations_form .variations td.label { width: 130px; padding: 0; text-align: left; }
+.variations_form .variations td.label label { font-size: 16px; font-weight: bold; color: #333; }
+.variations_form .variations td.value { flex: 1; padding: 0; display: flex; align-items: center; }
+.variations_form .variations td.value select { width: 100%; height: 42px; border: 1px solid #ccc; padding: 0 10px; font-size: 15px; background-color: #fff; }
+.reset_variations { padding: 10px; border: 1px solid #ccc; margin-left: 5px; color: #bd0000; border-radius: 3px; }
+
+/* ==========================================================================
+   5. KHU VỰC CHỌN SỐ LƯỢNG & NÚT MUA HÀNG
+   ========================================================================== */
+.product-cart-actions-wrapper { margin-top: 20px; width: 100%; }
+.product-cart-actions-wrapper form.cart { display: flex; flex-direction: column; }
+.quantity-and-add-to-cart { display: flex; gap: 10px; align-items: center; width: 100%; }
+
+/* Bộ chọn số lượng Custom */
+.custom-quantity-selector { display: flex; border: 1px solid #dcdcdc; background: #fff; height: 45px; align-items: center; }
+.qty-btn { width: 35px; height: 100%; background: #f9f9f9; border: none; color: #666; font-size: 16px; cursor: pointer; transition: background 0.2s; }
+.qty-btn:hover { background: #f0f0f0; }
+#custom-qty-input { width: 45px; height: 100%; border: none; border-left: 1px solid #eee; border-right: 1px solid #eee; text-align: center; font-size: 16px; color: #333; padding: 0; margin: 0; -moz-appearance: textfield; }
+#custom-qty-input::-webkit-outer-spin-button,
+#custom-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* Số lượng mặc định WooCommerce */
+.woocommerce-variation-add-to-cart { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; margin-top: 15px; }
+.woocommerce-variation-add-to-cart .quantity { display: inline-flex; align-items: center; }
+.quantity .qty { width: 35px; padding: 12px; }
+
+/* Nút Thêm vào giỏ hàng (Custom & Mặc định WC) */
+.custom-add-to-cart-btn,
+.woocommerce-variation-add-to-cart .single_add_to_cart_button {
+    flex: 1;
+    height: 45px;
+    background: transparent !important;
+    color: #d27c1a !important; 
+    border: 2px solid #d27c1a !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.custom-add-to-cart-btn:hover,
+.woocommerce-variation-add-to-cart .single_add_to_cart_button:hover {
+    background: #d27c1a !important;
+    color: #fff !important;
+}
+
+/* Nút MUA NGAY (Full-width Màu đỏ) */
+.custom-buy-now-btn {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 46px;
+    background: #bd0000 !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+.custom-buy-now-btn:hover {
+    background: #900000 !important;
+}
+
+/* ==========================================================================
+   6. XEM THÊM / RÚT GỌN & THÔNG TIN KHÁC
+   ========================================================================== */
+.home-endow { margin: 30px 0px; }
+.information-prd-title { padding: 10px 0px; border-top: 1px solid #ccc; margin: 45px 0px 15px; }
+.information-prd-title b { border-top: 2px solid red; padding-top: 12px; }
+
+.main-content-wrapper { position: relative; margin-bottom: 20px; }
+.main-content { max-height: 400px; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+.content-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.main-content-wrapper.is-expanded .content-overlay { opacity: 0; visibility: hidden; }
+
+.readmore-btn-wp { text-align: center; position: relative; z-index: 3; margin-top: -20px; }
+.view-more-btn { background: #ffffff; color: #e31818; border: 1px solid #e31818; padding: 8px 35px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; outline: none; display: inline-flex; align-items: center; gap: 5px; transition: all 0.3s ease; }
+.view-more-btn:hover { background: #e31818; color: #ffffff; }
+.view-more-btn .arrow { font-size: 10px; }
+.cmt-slider h2 { text-align: center; margin: 45px 0px 26px; }
+
+/* ==========================================================================
+   7. RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .product-main-content { flex-direction: column; }
+    .product-img, .product-info { width: 100%; }
+    .product-gallery-container { height: auto; flex-direction: column-reverse; }
+    .vertical-nav { width: 100%; }
+    
+    .flash-deal-banner {
+        height: auto;
+        padding: 15px;
+        background-size: cover;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quantity-and-add-to-cart { flex-direction: row; }
+}
+
+/* Ẩn giá mặc định của WooCommerce ở dưới form */
+.single_variation_wrap .woocommerce-variation-price {
+    display: none !important;
+}
+
+/* Đảm bảo giá ở trên luôn hiển thị */
+.product-info .price {
+    display: block !important;
+}
+
+/* Định dạng cho Swatch khi được chọn */
+.swatch-item.active {
+    border: 2px solid #ff0000 !important;
+}

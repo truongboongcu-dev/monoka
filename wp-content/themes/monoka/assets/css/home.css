@@ -1,0 +1,48 @@
+.video-container {
+width: 100%;
+overflow: hidden;
+position: relative;
+background-color: #000; /* Nền đen phòng trường hợp video chưa tải xong */
+}
+
+.video-container video {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover; /* Đảm bảo video lấp đầy không gian mà không bị méo */
+}
+
+.home-sale-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-sale-banner{
+  width:  75px;
+}
+
+.home-sale-top a, .see-more{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.home-sale{
+  margin: 40px 0px;
+}
+.home-category-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0px 0px 0px;
+}
+.home-category-loop{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 19px;
+}
+.blogs-thumbnar img{
+  height: 185px;
+}

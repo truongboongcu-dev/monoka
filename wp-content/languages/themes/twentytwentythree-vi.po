@@ -1,0 +1,18 @@
+# Translation of Themes - Twenty Twenty-Three in Vietnamese
+# This file is distributed under the same license as the Themes - Twenty Twenty-Three package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-04-08 07:46:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: vi_VN\n"
+"Project-Id-Version: Themes - Twenty Twenty-Three\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Twenty Twenty-Three is designed to take advantage of the new design tools introduced in WordPress 6.1. With a clean, blank base as a starting point, this default theme includes ten diverse style variations created by members of the WordPress community. Whether you want to build a complex or incredibly simple website, you can do it quickly and intuitively through the bundled styles or dive into creation and full customization yourself."
+msgstr "Twenty Twenty-Three là một giao diện (theme) mặc định của WordPress, được thiết kế để tận dụng tối đa các công cụ thiết kế mới được giới thiệu trong WordPress 6.1. Với nền tảng đơn giản, tối giản như một “trang trắng” (blank page), theme này giúp bạn dễ dàng bắt đầu xây dựng website theo cách riêng. Giao diện đi kèm 10 biến thể phong cách (style variations) đa dạng, được tạo bởi cộng đồng WordPress, cho phép bạn nhanh chóng thay đổi diện mạo website chỉ với vài thao tác. Dù bạn muốn xây dựng một website phức tạp hay cực kỳ đơn giản, Twenty Twenty-Three đều hỗ trợ thực hiện một cách nhanh chóng và trực quan thông qua các kiểu có sẵn hoặc tùy chỉnh toàn diện theo ý muốn."

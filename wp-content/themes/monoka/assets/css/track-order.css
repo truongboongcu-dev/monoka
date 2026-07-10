@@ -1,0 +1,141 @@
+
+    /* --- CSS CHUNG --- */
+    body { background-color: #f4f6f8; color: #333; }
+    .custom-order-tracking { margin: 40px auto;  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    
+    /* Card bao ngoài */
+    .order-card { background: #fff; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); padding: 40px; overflow: hidden; }
+
+    /* Nút bấm */
+    .btn-custom { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 500; text-decoration: none !important; display: inline-block; border: none; cursor: pointer; transition: 0.2s; }
+    
+    .btn-back { background: #f3f4f6; color: #374151 !important; margin-bottom: 20px; }
+    .btn-back:hover { background: #e5e7eb; }
+    
+    .btn-view { background: #be2a32; color: #fff !important; }
+    .btn-view:hover { background: #be2a32b5; }
+
+    /* Nút hủy đơn */
+    .btn-cancel { background: #fff; color: #dc2626 !important; border: 1px solid #fecaca !important; margin-right: 5px; }
+    .btn-cancel:hover { background: #fee2e2; border-color: #dc2626 !important; }
+
+    /* --- CSS RIÊNG CHO TRANG CHI TIẾT --- */
+    .order-header-info { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; margin-bottom: 30px; flex-wrap: wrap; gap: 15px; }
+    .oh-left h2 { margin: 0; font-size: 24px; color: #f17f0f;}
+    .oh-meta { color: #666; font-size: 14px; margin-top: 8px; line-height: 1.6; }
+    
+    /* Style cho ngày giao hàng dự kiến */
+    .delivery-date-highlight {
+        display: inline-block;
+        margin-top: 5px;
+        color: #0d9488; /* Màu xanh ngọc đậm */
+        background: #f0fdfa;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        border: 1px solid #ccfbf1;
+    }
+    .delivery-date-small {
+        display: block;
+        font-size: 12px;
+        color: #0d9488;
+        margin-top: 4px;
+        font-weight: 500;
+    }
+
+    .oh-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+
+    /* Badge trạng thái */
+    .status-badge { padding: 6px 12px; border-radius: 50px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; }
+    .st-completed { background: #dcfce7; color: #166534; }
+    .st-processing { background: #fef9c3; color: #854d0e; }
+    .st-on-hold { background: #ffedd5; color: #9a3412; }
+    .st-pending { background: #f3f4f6; color: #374151; }
+    .st-cancelled, .st-failed { background: #fee2e2; color: #991b1b; }
+
+    /* Bảng sản phẩm chi tiết */
+    .detail-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+    .detail-table th { text-align: left; padding: 15px; border-bottom: 2px solid #eee; color: #888; font-weight: 600; font-size: 13px; text-transform: uppercase; }
+    .detail-table td { padding: 15px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    .product-info { display: flex; align-items: center; gap: 15px; }
+    .product-thumb img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; border: 1px solid #eee; }
+    .product-name { font-weight: 600; color: #333; display: block; }
+    .product-meta { font-size: 12px; color: #888; margin-top: 2px; }
+
+    /* Khu vực Tổng tiền & Địa chỉ */
+    .order-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-top: 20px; }
+    
+    .info-box h3 { font-size: 16px; margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+    .address-details p { margin: 5px 0; color: #555; font-size: 14px; line-height: 1.6; }
+    
+    .totals-box { background: #f9fafb; padding: 25px; border-radius: 8px; }
+    .total-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #555; }
+    .total-row.final { border-top: 1px solid #e5e7eb; margin-top: 15px; padding-top: 15px; font-weight: 700; color: #000; font-size: 18px; }
+
+    /* CSS cho danh sách đơn hàng */
+    .modern-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .modern-table th { background: #f9fafb; padding: 16px; text-align: left; border-bottom: 2px solid #edf2f7; font-size: 12px; text-transform: uppercase; color: #be2a32; }
+    .modern-table td { padding: 16px; border-bottom: 1px solid #edf2f7; vertical-align: middle; }
+    .order-id-link { color: #2563eb; font-weight: 700; text-decoration: none; }
+    
+    .user-TT-item{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    .user-TT-icon svg{
+        width: 24px;
+        padding: 3px;
+        border: 1px solid #be2a32;
+        border-radius: 50%;       
+    }
+    .user-TT-edit-img{
+       width: 10px; 
+    }
+    .user-TT{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px 0px;
+    }
+    .user-TT-icon img{
+        width: 19px;
+        padding: 6px;
+        border: 1px solid #be2a32;
+        border-radius: 50%;
+    }
+    .user-TT-icon{
+        width: 40px;
+    }
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .order-footer-grid { grid-template-columns: 1fr; }
+        .product-info { flex-direction: column; align-items: flex-start; }
+        .detail-table th:first-child { width: 60%; }
+        .oh-header-info { flex-direction: column; align-items: flex-start; }
+        .oh-right { align-items: flex-start; margin-top: 15px; }
+    }
+
+@media (max-width: 450px) {
+    .order-card{
+        padding: 15px;
+    }
+    .modern-table td{
+        padding: 0px;
+    }
+    tbody{
+        font-size: 10px;
+    }
+    .status-badge,.btn-custom{
+        font-size: 7px;
+    }
+    .btn-custom{
+      padding: 3px 10px;  
+    }
+    .btn-cancel{
+        font-size: 7px;
+    }
+    .modern-table th{
+        padding: 6px;
+        font-size: 10px;
+    }
+}   
