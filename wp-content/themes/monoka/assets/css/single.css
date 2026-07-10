@@ -1,0 +1,12 @@
+.breadcrumbs{
+	display: flex;
+}
+.wrap-content{
+	display: flex;
+}
+.col-7{
+	width: 70%;
+}
+.col-3{
+	width: 30%;
+}

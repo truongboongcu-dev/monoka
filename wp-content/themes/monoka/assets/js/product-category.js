@@ -1,0 +1,30 @@
+$(document).ready(function() {
+    $('.category-slider .owl-carousel').owlCarousel({
+        loop:false,
+        nav:false,
+        dots:false,
+        autoplay:false,
+        margin:18,
+        autoplayHoverPause:true,
+        responsive:{
+        0:{
+            items:1
+        },
+        300:{
+            items:3
+        },       
+        700:{
+            items:5.5
+        },
+        1000:{
+            items:7.7
+        },
+        1200:{
+            items:8.7
+        },
+        1450:{
+            items:8
+        },
+    },
+    })
+});

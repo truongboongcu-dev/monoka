@@ -1,0 +1,218 @@
+.item-category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-category img{
+    border-radius: 50%;
+    width: 152px !important;
+    height: 152px;
+    margin-bottom: 12px;
+}
+.ctegory-text{
+    text-align: center;
+}
+
+.ban-tim{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px 0px; 
+}
+
+.product-loop-wrap{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 50px 0px;
+}
+
+/* ==========================================================================
+   CSS Phân Trang Chuẩn Theo Mẫu (Hình vuông bo góc, Viền đỏ)
+   ========================================================================== */
+.nav {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Loại bỏ các đường viền bọc ngoài của thẻ UL gốc để tạo khoảng thoáng như mẫu */
+.nav ul.page-numbers {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px; /* Tạo khoảng cách giữa các ô số */
+}
+
+.nav ul.page-numbers li {
+    margin: 0;
+    padding: 0;
+    border: none; /* Xóa bỏ border dọc phân cách cũ */
+}
+
+/* Style chung cho các nút bấm và số trang */
+.nav ul.page-numbers a.page-numbers,
+.nav ul.page-numbers span.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #004b87; /* Màu xanh của số (bạn có thể đổi thành #333 nếu muốn màu tối) */
+    min-width: 38px;
+    height: 38px;
+    border-radius: 6px; /* Bo góc nhẹ giống hình vuông trong ảnh mẫu */
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent; /* Tránh bị giật layout khi hover */
+}
+
+/* Style riêng cho trang đầu tiên hoặc các trang thường khi có viền (Giống số 1 trong ảnh) */
+.nav ul.page-numbers a.page-numbers {
+    /* Nếu bạn muốn tất cả các số trang đều có viền mảnh mặc định giống số 1 */
+    border: 1px solid #cc0000; 
+    color: #cc0000;
+}
+
+/* Nếu bạn muốn chỉ có trang 1 (hoặc các số thường) có viền đỏ, hover vào mới đổi nền */
+.nav ul.page-numbers a.page-numbers:hover {
+    background-color: #cc0000;
+    color: #fff !important;
+    border-color: #cc0000;
+}
+
+/* Trang hiện tại đang được chọn (Giống số 2 nền đỏ chữ trắng trong ảnh) */
+.nav ul.page-numbers span.page-numbers.current {
+    background-color: #cc0000; /* Màu nền đỏ đậm */
+    color: #fff;
+    border-color: #cc0000;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* Định dạng dấu ba chấm (...) */
+.nav ul.page-numbers span.dots {
+    color: #666;
+    border: none;
+    min-width: 24px;
+    cursor: default;
+}
+
+/* ==========================================================================
+   CSS THANH BỘ LỌC CHUẨN ĐẸP THEO MẪU
+   ========================================================================== */
+
+/* 1. Khung bọc ngoài dàn ngang */
+.filter-archive-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    margin: 25px 0px;
+    background: #fff;
+}
+
+/* 2. Cụm Breadcrumb bên trái (Trang chủ / TRANH DÁN TƯỜNG 3D) */
+.filter-left-breadcrumb .woocommerce-breadcrumb {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 13px;
+    color: #999999; /* Màu chữ Trang chủ mờ */
+    font-weight: 400;
+}
+
+.filter-left-breadcrumb .woocommerce-breadcrumb a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.filter-left-breadcrumb .woocommerce-breadcrumb a:hover {
+    color: #333;
+}
+
+/* Chữ danh mục hiện tại in hoa và đậm */
+.filter-left-breadcrumb .woocommerce-breadcrumb strong {
+    color: #1a1a1a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 3. Khối bên phải (Gồm đếm kết quả và Selectbox sắp xếp) */
+.filter-right-ordering {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Khoảng cách giữa chữ kết quả và ô select */
+}
+
+/* Text hiển thị số lượng kết quả */
+.filter-result-count .woocommerce-result-count {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666666; /* Màu xám mảnh như mẫu */
+}
+
+/* 4. Dropdown Selectbox sắp xếp sản phẩm */
+.filter-catalog-orderby .woocommerce-ordering {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-catalog-orderby .woocommerce-ordering select {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 9px 40px 9px 12px;
+    border: 1px solid #e0e0e0; /* Viền xám mảnh */
+    border-radius: 3px;        /* Bo góc vuông nhẹ tinh tế */
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    
+    /* Custom lại mũi tên góc phải của select box */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23666666' d='M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 10px;
+    
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Hiệu ứng khi click vào chọn */
+.filter-catalog-orderby .woocommerce-ordering select:focus {
+    border-color: #b3b3b3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* 5. Responsive mượt mà cho Mobile */
+@media (max-width: 768px) {
+    .filter-archive-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+    }
+    .filter-right-ordering {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .filter-catalog-orderby .woocommerce-ordering select {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+

@@ -1,0 +1,262 @@
+/* Làm gọn các form field */
+.woocommerce-checkout .form-row {
+    margin-bottom: 15px !important;
+}
+.woocommerce-checkout input.input-text {
+    padding: 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid #ddd !important;
+}
+.woocommerce-checkout input.input-text:focus {
+    border-color: #be2a32 !important;
+    box-shadow: none !important;
+}
+
+/* Ẩn các tiêu đề không cần thiết */
+.woocommerce-billing-fields h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Nút đặt hàng nổi bật */
+#place_order {
+    background-color: #be2a32 !important;
+    padding: 15px 30px !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+}
+
+/* Container chính của checkout */
+form.woocommerce-checkout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Khoảng cách giữa 2 cột */
+    align-items: flex-start;
+}
+
+/* Cột bên trái (Thông tin thanh toán + Ghi chú) */
+#customer_details {
+    flex: 1; /* Chiếm phần còn lại */
+    min-width: 50%;
+}
+
+/* Cột bên phải (Đơn hàng + Thanh toán) */
+#order_review_heading,
+#order_review {
+    width: 35%; /* Cố định chiều rộng cột phải */
+    position: sticky;
+    top: 20px;
+}
+
+/* Tùy chỉnh làm đẹp bảng đơn hàng cột phải */
+#order_review {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    form.woocommerce-checkout { flex-direction: column; }
+    #customer_details, #order_review, #order_review_heading { width: 100%; }
+}
+
+#order_review_heading{
+    display: none;
+}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1,.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+    width: 100% !important;
+}
+
+/* ==========================================================================
+   CSS SỬA LỖI LAYOUT & THÔNG BÁO TRANG THANH TOÁN (CHECKOUT)
+   ========================================================================== */
+
+/* --- 1. Sửa lỗi khối thông báo bị bóp méo (Ép rộng 100% trên cùng) --- */
+.woocommerce-NoticeGroup,
+.woocommerce-error, 
+.woocommerce-message, 
+.woocommerce-info {
+    width: 100% !important;
+    margin: 0 auto 20px auto !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    clear: both !important;
+    display: block !important; /* Tránh bị ảnh hưởng bởi flexbox */
+}
+
+/* Làm đẹp thanh thông báo lỗi */
+.woocommerce-error {
+    background-color: #fef2f2 !important;
+    border-left: 4px solid #ef4444 !important;
+    color: #991b1b !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    list-style: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+/* --- 2. Khung bọc Flexbox (Chỉ kích hoạt từ thẻ FORM checkout xuống) --- */
+form.woocommerce-checkout {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box !important;
+}
+
+/* --- 3. CỘT TRÁI: Thông tin khách hàng (Chiếm 58%) --- */
+#customer_details {
+    width: 58% !important;
+    flex: none !important;
+    float: none !important;
+}
+
+/* Tiêu đề góc trái */
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #be2a32;
+}
+
+/* Ô nhập liệu tinh chỉnh */
+.woocommerce-checkout .form-row {
+    margin-bottom: 15px !important;
+}
+
+.woocommerce-checkout input.input-text,
+.woocommerce-checkout select,
+.woocommerce-checkout textarea {
+    width: 100% !important;
+    padding: 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid #cbd5e1 !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+
+.woocommerce-checkout input.input-text:focus,
+.woocommerce-checkout textarea:focus {
+    border-color: #be2a32 !important;
+    box-shadow: 0 0 0 3px rgba(190, 42, 50, 0.1) !important;
+}
+
+/* --- 4. CỘT PHẢI: Đơn hàng & Đặt hàng (Chiếm 38%) --- */
+#order_review_heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 100% !important;
+}
+
+#order_review {
+    width: 38% !important; /* Giữ tỷ lệ cân đối với cột trái */
+    background: #ffffff !important;
+    padding: 25px !important;
+    border-radius: 12px !important;
+    border: 1px solid #edf2f7 !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+    box-sizing: border-box !important;
+    position: sticky;
+    top: 20px;
+}
+
+/* --- Định dạng bảng đơn hàng bên trong cột phải --- */
+table.shop_table.woocommerce-checkout-review-order-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 20px !important;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table th,
+table.shop_table.woocommerce-checkout-review-order-table td {
+    padding: 12px 8px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    font-size: 14px !important;
+    background: none !important;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table .product-name {
+    text-align: left !important;
+    font-weight: 500;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table .product-total,
+table.shop_table.woocommerce-checkout-review-order-table .cart-subtotal td,
+table.shop_table.woocommerce-checkout-review-order-table .order-total td {
+    text-align: right !important;
+}
+
+/* Tổng tiền */
+table.shop_table.woocommerce-checkout-review-order-table .order-total th,
+table.shop_table.woocommerce-checkout-review-order-table .order-total td {
+    border-bottom: none !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding-top: 20px !important;
+}
+
+table.shop_table.woocommerce-checkout-review-order-table .order-total td span {
+    color: #be2a32 !important;
+    font-size: 20px !important;
+}
+
+/* --- Khối cổng thanh toán & Nút Đặt hàng --- */
+#payment {
+    background: #fafafa !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    margin-top: 15px !important;
+}
+
+#place_order {
+    display: block !important;
+    width: 100% !important;
+    background-color: #be2a32 !important;
+    color: #fff !important;
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(190, 42, 50, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+#place_order:hover {
+    background-color: #a32027 !important;
+}
+
+/* --- Tối ưu hiển thị trên Điện thoại (Dưới 991px) --- */
+@media (max-width: 991px) {
+    form.woocommerce-checkout {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    #customer_details,
+    #order_review {
+        width: 100% !important;
+    }
+}
+
+.woocommerce table.shop_table {
+    border: none;
+}
